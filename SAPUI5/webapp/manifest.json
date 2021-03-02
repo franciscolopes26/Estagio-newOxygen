@@ -1,0 +1,142 @@
+{
+	"_version": "1.21.0",
+	"sap.app": {
+		"id": "sap.ui.demo.nav",
+		"type": "application",
+		"i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+			"supportedLocales": [
+				""
+			],
+			"fallbackLocale": ""
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+  	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui.demo.nav.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.ui.demo.nav.i18n.i18n",
+					"supportedLocales": [
+						""
+					],
+					"fallbackLocale": ""
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.demo.nav.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "appHome",
+					"target": "home"
+				},
+				{
+					"pattern": "hardCoded",
+					"name": "HardCoded",
+					"target": "NavParametersPage"
+				},
+				{
+					"pattern": "mandatoryParameter-{mandatoryValue}",
+					"name": "MandatoryParameters",
+					"target": "NavParametersPage"
+				},
+				{
+					"pattern": "optionalParameter-:optionalValue:",
+					"name": "OptionalParameter",
+					"target": "NavParametersPage"
+				},
+				{
+					"pattern": "query-{?oQuery}",
+					"name": "QueryParameters",
+					"target": "NavParametersPage"
+				},
+				{
+					"pattern": "restAsString-:*all:",
+					"name": "RestAsStringParameters",
+					"target": "NavParametersPage"
+				},
+				{
+					"pattern": "SecondPage",
+					"name": "SecondPage",
+					"target": ["SecondPageTop", "SecondPageContent"],
+					"titleTarget": "SecondPageContent"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewId": "home",
+					"viewName": "Home",
+					"title": "Home Page"
+				},
+				"NavParametersPage": {
+					"viewName": "NavParameters"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"transition": "show"
+				},
+				"SecondPage": {
+					"viewId": "SecondPage",
+					"viewPath": "sap.ui.demo.nav.view.SecondPage",
+					"viewName": "SecondPage",
+					"title": "Second Page"
+				},
+				"SecondPageTop": {
+					"parent": "SecondPage",
+					"viewPath": "sap.ui.demo.nav.view.SecondPage",
+					"viewName": "SecondPageTop",
+					"controlId": "SecondPageParent",
+					"controlAggregation": "content",
+					"title": "Top Component Title"
+				},
+				"SecondPageContent": {
+					"parent": "SecondPage",
+					"viewPath": "sap.ui.demo.nav.view.SecondPage",
+					"viewName": "SecondPageContent",
+					"controlId": "SecondPageParent",
+					"controlAggregation": "content",
+					"title": "{{bottomComponent}}"
+				}
+			}
+		}
+	}
+}

@@ -1,12 +1,8 @@
-sap.ui.define([
-   "sap/ui/core/mvc/XMLView"
-
-], function(XMLView) {
-    "use strict";
-   
-    XMLView.create({
-        viewName:"sap.ui.demo.walkthrough.view.App"
-    }).then(function(oView){
-        oView.placetAt('content')
-    });
-});
+sap.ui.getCore().attachInit(function () {
+    sap.ui.require(["sap/ui/core/mvc/XMLView"], function(XMLView) {
+     XMLView.create({
+     viewName: "HelloWorld.App"}).then(function(myView) {
+         myView.placeAt("content");
+      });
+     });
+  });

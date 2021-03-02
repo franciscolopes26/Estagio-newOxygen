@@ -1,0 +1,23 @@
+<mvc:View
+	controllerName="sap.ui.demo.nav.controller.NavParameters"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>secondPage}"
+		showNavButton="true"
+		navButtonPress=".onNavBack"
+		class="sapUiResponsiveContentPadding">
+		<content>
+			<VBox>
+				<Title text="{i18n>route}:"/>
+				<Text class="sapUiSmallMarginTop sapUiSmallMarginBegin" text="Name: {/name}" />
+				<Text class="sapUiSmallMarginTopBottom sapUiSmallMarginBegin" text="Pattern: {/pattern}" />
+				<Text class="sapUiSmallMarginBottom sapUiSmallMarginBegin" text="Hash: {/hash}" />
+			</VBox>
+			<VBox class="sapUiSmallMarginTop">
+				<Title text="{i18n>routeParameters}:"/>
+				<Text class="sapUiSmallMarginTopBottom sapUiSmallMarginBegin" text="{/parameters}" />
+			</VBox>
+
+		</content>
+	</Page>
+</mvc:View>

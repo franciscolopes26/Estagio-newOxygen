@@ -1,0 +1,22 @@
+{
+  "name": "SAPUI5-Routing-and-Navigation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironyhouse/SAPUI5-Routing-and-Navigation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ironyhouse/SAPUI5-Routing-and-Navigation/issues"
+  },
+  "homepage": "https://github.com/ironyhouse/SAPUI5-Routing-and-Navigation#readme"
+}
