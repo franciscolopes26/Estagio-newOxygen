@@ -1,0 +1,22 @@
+{
+	"comment": "Translation configuration for ui5-webcomponents",
+	"collections": [{
+		"collectionName": "UI5 Web Components",
+		"folders": [{
+			"startingFolderPath": "./packages/",
+			"sourceFilters": [
+				"*/src/**/messagebundle.properties"
+			],
+			"excludedSourceFilters": [
+				"*/packages/tools/**/messagebundle.properties"
+			]
+		}]
+	}],
+	"defaultConfiguration": {
+		"xlfFolderPath": "./XLF/[FullPath]",
+		"targetFolderPath": ".",
+		"pseudoLocFolderPath": ".",
+		"oneQFolderPath": ".",
+		"targetFileNamingConvention": "[filename]_[langCode].[extension]"
+	}
+}

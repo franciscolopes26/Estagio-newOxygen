@@ -1,0 +1,39 @@
+{
+  "name": "@ui5/webcomponents-base",
+  "version": "0.30.0",
+  "description": "UI5 Web Components: webcomponents.base",
+  "author": "SAP SE (https://www.sap.com)",
+  "license": "Apache-2.0",
+  "module": "index.js",
+  "keywords": [
+    "openui5",
+    "sapui5",
+    "ui5"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAP/ui5-webcomponents.git",
+    "directory": "packages/base"
+  },
+  "scripts": {
+    "clean": "nps clean",
+    "lint": "nps lint",
+    "start": "nps start",
+    "build": "nps build",
+    "test": "nps test",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "lit-html": "^1.0.0"
+  },
+  "devDependencies": {
+    "@ui5/webcomponents-tools": "1.0.0-rc.12",
+    "array-uniq": "^2.0.0",
+    "chromedriver": "88.0.0",
+    "copy-and-watch": "^0.1.4",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "npm-run-all": "^4.1.5",
+    "path-exists-cli": "^1.0.0"
+  }
+}

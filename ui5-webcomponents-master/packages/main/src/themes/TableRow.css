@@ -1,0 +1,37 @@
+:host {
+	display: contents;
+}
+
+:host([_busy]) .ui5-table-row-root {
+	opacity: 0.72;
+	pointer-events: none;
+}
+
+.ui5-table-row-root {
+	background-color: var(--sapList_Background);
+	border-top: 1px solid var(--sapList_BorderColor);
+}
+
+.ui5-table-row-root:focus {
+	outline: var(--ui5_table_row_outline_width) dotted var(--sapContent_FocusColor);
+	outline-offset: -0.125rem;
+}
+
+.ui5-table-popin-row {
+    background-color: var(--sapList_Background);
+}
+
+.ui5-table-popin-row.all-columns-popped-in.popin-header {
+    border-top: 1px solid var(--sapList_BorderColor);
+}
+
+.ui5-table-popin-row td {
+	padding: .25rem;
+	padding-left: 1rem;
+}
+
+.ui5-table-row-popin-title {
+	color: var(--sapContent_LabelColor);
+	font-family: "72override", var(--sapFontFamily);
+	font-size: var(--sapFontSize);
+}
